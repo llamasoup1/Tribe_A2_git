@@ -19,7 +19,7 @@ public class AlertController: UIAlertController {
         if let rootViewController = alertWindow.rootViewController {
             alertWindow.makeKeyAndVisible()
             
-            rootViewController.presentViewController(self, animated: flag, completion: completion)
+            rootViewController.presentViewController(self, animated: flag, completion: nil)
         }
     }
     

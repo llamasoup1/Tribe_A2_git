@@ -43,7 +43,6 @@
                                 </state>
                                 <connections>
                                     <action selector="logIn:" destination="0F6-4Z-eip" eventType="touchUpInside" id="lSr-ER-sab"/>
-                                    <segue destination="dav-Uf-WdV" kind="presentation" identifier="logIn" id="cWB-Zo-PWD"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -66,6 +65,7 @@
                     <connections>
                         <outlet property="emailField" destination="dWw-Bm-ui3" id="ngy-vM-hYX"/>
                         <outlet property="passwordField" destination="eDl-qE-Vxu" id="O2E-M9-psC"/>
+                        <segue destination="dav-Uf-WdV" kind="presentation" identifier="logIn" id="cZ0-vz-qwc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NnL-or-YwB" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -97,7 +97,7 @@
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="6Pf-l4-0dB" kind="show" id="4X2-7R-1o0"/>
+                                    <segue destination="6Pf-l4-0dB" kind="show" id="skl-H2-lCR"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fKZ-Pd-j7c">
@@ -107,7 +107,7 @@
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="0F6-4Z-eip" kind="show" id="CpL-fX-u6A"/>
+                                    <segue destination="0F6-4Z-eip" kind="presentation" identifier="logIn" id="2IZ-Oo-XOG"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -156,7 +156,6 @@
                                 </state>
                                 <connections>
                                     <action selector="register:" destination="6Pf-l4-0dB" eventType="touchUpInside" id="bEr-2j-Ia6"/>
-                                    <segue destination="dav-Uf-WdV" kind="presentation" identifier="registration" id="uxy-Rc-mWL"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Qog-ZE-bhe">
@@ -218,11 +217,12 @@
                         <outlet property="firstnameField" destination="m6U-Xy-we5" id="3xn-eb-1rR"/>
                         <outlet property="lastnameField" destination="lHp-TE-lW1" id="E6z-Ys-Plz"/>
                         <outlet property="passwordField" destination="Qog-ZE-bhe" id="nHV-Ef-pFi"/>
+                        <segue destination="dav-Uf-WdV" kind="presentation" identifier="register" id="eqf-zo-3gP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uph-cb-DvA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-29" y="605"/>
+            <point key="canvasLocation" x="-52" y="742"/>
         </scene>
         <!--What's On?-->
         <scene sceneID="EdO-rY-bki">
@@ -246,7 +246,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kkZ-rS-eNW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="304" y="1403"/>
+            <point key="canvasLocation" x="291" y="1557"/>
         </scene>
         <!--What's On?-->
         <scene sceneID="Qui-Pn-YBr">
@@ -482,9 +482,9 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Tribe Logo" width="780" height="439"/>
+        <image name="Tribe Logo" width="974" height="308"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="cWB-Zo-PWD"/>
+        <segue reference="cZ0-vz-qwc"/>
     </inferredMetricsTieBreakers>
 </document>

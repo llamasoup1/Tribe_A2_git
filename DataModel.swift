@@ -43,13 +43,13 @@ class Model
         let fetchRequest = NSFetchRequest(entityName: "User")
         fetchRequest.predicate = NSPredicate(format: "email == %@", uEmail)
         let fetchResults = managedContext.countForFetchRequest(fetchRequest, error: error)
-        //check if empty
-        let viewController = alertWindow.rootViewController
+        //*****let viewController = alertWindow.rootViewController*****
+        //******print(viewController)*****
+        //check if fields are empty
         if(fName.isEmpty || lName.isEmpty || uEmail.isEmpty || pWd1.isEmpty || pWd2.isEmpty)
         {
             print("ERROR 1")
             displayMyAlertMessage("All fields are required")
-            shouldPerformSegueWithIdentifier("registration", sender: viewController)
             return
         }
         //check if passwords equal
@@ -57,7 +57,6 @@ class Model
         {
             print("ERROR 2")
             displayMyAlertMessage("Passwords do not match")
-            shouldPerformSegueWithIdentifier("registration", sender: viewController)
             return
         }
         //check if user already exists
@@ -65,13 +64,11 @@ class Model
         {
             print("ERROR 3")
             displayMyAlertMessage("User is already registered")
-            shouldPerformSegueWithIdentifier("registration", sender: viewController)
             return
         }
         //if all requirements met, create an object based on the entity
         else
         {
-            print("nope")
             let user = User(entity: entity!,
                 insertIntoManagedObjectContext:managedContext)
             user.firstname = fName
@@ -80,6 +77,8 @@ class Model
             user.password = pWd1
             
             updateDatabase()
+            //this line of code required to segue manually to next page!
+            //*********viewController.performSegueWithIdentifier("register" ,sender:self)******
         }
         
     }
@@ -93,7 +92,6 @@ class Model
         {
             print("ERROR 1")
             displayMyAlertMessage("All fields are required")
-            shouldPerformSegueWithIdentifier("login", sender: viewController)
             return false
         }
         else
@@ -110,11 +108,11 @@ class Model
                 {
                 
                     print("login")
+                    viewController?.performSegueWithIdentifier("registration" ,sender:viewController)
                     return true   // Entered Username & password matched
                 }
                 else
                 {
-                    shouldPerformSegueWithIdentifier("logIn", sender: viewController)
                     print("fail")
                     displayMyAlertMessage("Username and password combination incorrect")
                     return false  //Wrong password/username
@@ -157,15 +155,6 @@ class Model
         }
     }
     
-    func perfromSegueWithIdenifier(identifier1: String,sender1: AnyObject?) {
-        if  self.shouldPerformSegueWithIdentifier(identifier1, sender: sender1) == true{
-            if let rootViewController = alertWindow.rootViewController {
-    
-                rootViewController.performSegueWithIdentifier("registration" ,sender:rootViewController)
-            }
-        }
-    }
-
     //display UIAlert
     func displayMyAlertMessage(userMessage:String)
     {
@@ -178,11 +167,6 @@ class Model
         myAlert.addAction(okAction)
 
         myAlert.show()
-    }
-    
-     func shouldPerformSegueWithIdentifier(identifier: String,sender: AnyObject?) -> Bool {
-        
-        return false
     }
     
     // Struct to hold the instance of the model
