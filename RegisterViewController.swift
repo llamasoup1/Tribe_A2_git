@@ -18,10 +18,10 @@ class RegisterViewController: UIViewController {
 
     //Register user
     @IBAction func register(sender: UIButton) {
-        
-        Model.sharedInstance.saveUser(firstnameField.text!, lName: lastnameField.text!, uEmail: emailField.text!, pWd1: passwordField.text!, pWd2: confirmPasswordField.text!)
+        //if registration successful, continue
+        if Model.sharedInstance.saveUser(firstnameField.text!, lName: lastnameField.text!, uEmail: emailField.text!, pWd1: passwordField.text!, pWd2: confirmPasswordField.text!) == true{
+            self.performSegueWithIdentifier("register" ,sender:sender)
+        }
+            
     }
-
-
-    
 }

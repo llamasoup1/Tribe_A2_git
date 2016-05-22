@@ -4,8 +4,6 @@ import CoreData
 import UIKit
 class Model
 {
-    
-    
     // Get a reference to your App Delegate
     let appDelegate =
     UIApplication.sharedApplication().delegate as! AppDelegate
@@ -18,13 +16,8 @@ class Model
         }
     }
     
-    
     // Create a collection of objects to store in the database
     var userdb = [NSManagedObject]()
-    
-    private lazy var alertWindow: UIWindow = {
-        let window = UIWindow(frame: UIScreen.mainScreen().bounds)
-        return window}()
     
     func getUser(indexPath: NSIndexPath) -> User
     {
@@ -33,38 +26,34 @@ class Model
     
     // MARK: - CRUD
     
-    func saveUser(fName: String, lName: String, uEmail: String, pWd1:String, pWd2:String)
+    func saveUser(fName: String, lName: String, uEmail: String, pWd1:String, pWd2:String)->Bool
     {
         // Create a new managed object and insert it into the context, so it can be saved into the database
-        let entity =  NSEntityDescription.entityForName("User",
-            inManagedObjectContext:managedContext)
+        let entity =  NSEntityDescription.entityForName("User", inManagedObjectContext:managedContext)
+        
         //prepre for input validation
         let error = NSErrorPointer()
         let fetchRequest = NSFetchRequest(entityName: "User")
         fetchRequest.predicate = NSPredicate(format: "email == %@", uEmail)
         let fetchResults = managedContext.countForFetchRequest(fetchRequest, error: error)
-        //*****let viewController = alertWindow.rootViewController*****
-        //******print(viewController)*****
+        
         //check if fields are empty
         if(fName.isEmpty || lName.isEmpty || uEmail.isEmpty || pWd1.isEmpty || pWd2.isEmpty)
         {
-            print("ERROR 1")
             displayMyAlertMessage("All fields are required")
-            return
+            return false
         }
         //check if passwords equal
         else if(pWd1 != pWd2)
         {
-            print("ERROR 2")
             displayMyAlertMessage("Passwords do not match")
-            return
+            return false
         }
         //check if user already exists
         else if(fetchResults > 0)
         {
-            print("ERROR 3")
             displayMyAlertMessage("User is already registered")
-            return
+            return false
         }
         //if all requirements met, create an object based on the entity
         else
@@ -75,47 +64,41 @@ class Model
             user.lastname = lName
             user.email = uEmail
             user.password = pWd1
-            
+            print("here")
             updateDatabase()
-            //this line of code required to segue manually to next page!
-            //*********viewController.performSegueWithIdentifier("register" ,sender:self)******
+            print("here - 2")
+            return true
         }
-        
     }
 
-    
+    //validate logIn detials are correct
     func validateLogIn(uEmail : String, password : String) ->Bool
     {
-        print("here")
-        let viewController = alertWindow.rootViewController
+        //check for empty fields
         if(uEmail.isEmpty || password.isEmpty)
         {
-            print("ERROR 1")
             displayMyAlertMessage("All fields are required")
             return false
         }
         else
         {
+            //check username and password match records
             let predicate = NSPredicate (format:"email = %@" ,uEmail)
             let fetchRequest = NSFetchRequest ( entityName: "User")
             fetchRequest.predicate = predicate
             let fetchResult = try! self.managedContext.executeFetchRequest(fetchRequest) as! [User]
-        
             if fetchResult.count>0
             {
                 let objectEntity : User = fetchResult.first! as User
                 if objectEntity.email == uEmail && objectEntity.password == password
                 {
-                
-                    print("login")
-                    viewController?.performSegueWithIdentifier("registration" ,sender:viewController)
-                    return true   // Entered Username & password matched
+                    return true   // Entered email & password matched
                 }
                 else
                 {
                     print("fail")
                     displayMyAlertMessage("Username and password combination incorrect")
-                    return false  //Wrong password/username
+                    return false  //Wrong password/email
                 }
             }
         }
@@ -169,6 +152,8 @@ class Model
         myAlert.show()
     }
     
+    
+    
     // Struct to hold the instance of the model
     private struct Static
     {
@@ -186,6 +171,8 @@ class Model
     }
     
 }
+
+
 
 
 

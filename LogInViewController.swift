@@ -17,8 +17,10 @@ class LogInViewController: UIViewController {
 
 
     @IBAction func logIn(sender:  UIButton) {
-        
-        Model.sharedInstance.validateLogIn(emailField.text!, password: passwordField.text!)
+        //validate login, if successful proceed
+        if Model.sharedInstance.validateLogIn(emailField.text!, password: passwordField.text!) == true{
+            self.performSegueWithIdentifier("logIn" ,sender:sender)
+        }
     }
     
         

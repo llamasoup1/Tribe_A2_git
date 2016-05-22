@@ -227,7 +227,7 @@
         <!--What's On?-->
         <scene sceneID="EdO-rY-bki">
             <objects>
-                <navigationController title="What's On?" automaticallyAdjustsScrollViewInsets="NO" id="dav-Uf-WdV" sceneMemberID="viewController">
+                <navigationController title="What's On?" automaticallyAdjustsScrollViewInsets="NO" id="dav-Uf-WdV" customClass="navigationController" customModule="Tribe" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <nil key="simulatedTopBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="m2L-Z5-gIn">
