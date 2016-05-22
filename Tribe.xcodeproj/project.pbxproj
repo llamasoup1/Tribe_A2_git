@@ -23,6 +23,8 @@
 		6A64C41B1CED87BB00CCA7C6 /* Tribe.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6A64C4191CED87BB00CCA7C6 /* Tribe.xcdatamodeld */; };
 		6A64C41D1CED87BB00CCA7C6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6A64C41C1CED87BB00CCA7C6 /* Assets.xcassets */; };
 		6A64C4201CED87BB00CCA7C6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6A64C41E1CED87BB00CCA7C6 /* LaunchScreen.storyboard */; };
+		8B4A537B1CF1BDE800E185E9 /* FeaturedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B4A53791CF1BDE800E185E9 /* FeaturedViewController.swift */; };
+		8B4A537C1CF1BDE800E185E9 /* CustomPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B4A537A1CF1BDE800E185E9 /* CustomPageViewController.swift */; };
 		9D430AD3D191BD82BC8E9222 /* Pods_Tribe.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C657DE554F606FBCCE4ED3E0 /* Pods_Tribe.framework */; };
 /* End PBXBuildFile section */
 
@@ -46,6 +48,8 @@
 		6A64C41C1CED87BB00CCA7C6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = Tribe/Assets.xcassets; sourceTree = "<group>"; };
 		6A64C41F1CED87BB00CCA7C6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6A64C4211CED87BB00CCA7C6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = Tribe/Info.plist; sourceTree = "<group>"; };
+		8B4A53791CF1BDE800E185E9 /* FeaturedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeaturedViewController.swift; sourceTree = "<group>"; };
+		8B4A537A1CF1BDE800E185E9 /* CustomPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomPageViewController.swift; sourceTree = "<group>"; };
 		A2BFFE4E64451ECADE16DF66 /* Pods-Tribe.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tribe.release.xcconfig"; path = "Pods/Target Support Files/Pods-Tribe/Pods-Tribe.release.xcconfig"; sourceTree = "<group>"; };
 		C657DE554F606FBCCE4ED3E0 /* Pods_Tribe.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tribe.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -68,6 +72,8 @@
 				64FAF9D41CF0399E009E6AF7 /* WhatsOnViewController.swift */,
 				390F9B931CEEA27D00F34071 /* CustomTableViewCell.swift */,
 				390F9B5E1CED8E8C00F34071 /* LandingViewController.swift */,
+				8B4A53791CF1BDE800E185E9 /* FeaturedViewController.swift */,
+				8B4A537A1CF1BDE800E185E9 /* CustomPageViewController.swift */,
 				390F9B5A1CED8E5D00F34071 /* LogInViewController.swift */,
 				390F9B5C1CED8E7000F34071 /* RegisterViewController.swift */,
 				6A64C4141CED87BB00CCA7C6 /* WhatsOnListViewController.swift */,
@@ -280,8 +286,10 @@
 				64F691C11CF078F000C82C98 /* DataModel.swift in Sources */,
 				6A64C41B1CED87BB00CCA7C6 /* Tribe.xcdatamodeld in Sources */,
 				6A64C4151CED87BB00CCA7C6 /* WhatsOnListViewController.swift in Sources */,
+				8B4A537B1CF1BDE800E185E9 /* FeaturedViewController.swift in Sources */,
 				64FAF9D51CF0399E009E6AF7 /* WhatsOnViewController.swift in Sources */,
 				390F9B5F1CED8E8C00F34071 /* LandingViewController.swift in Sources */,
+				8B4A537C1CF1BDE800E185E9 /* CustomPageViewController.swift in Sources */,
 				6A64C4131CED87BB00CCA7C6 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -89,6 +89,8 @@ class WhatsOnListController: UIViewController {
                 let locationLongVar = dictArrRes["venues"]?[0]?["lng"] as? Double
                 let bookingLinkVar = dictArrRes["venues"]?[0]?["performances"]?![0]?["sourceUrl"] as? String
                 
+                let urlStringVar = self.arrRes[indexPath.row]["image"]?["lowResolution"]?!["url"] as! String
+                
                 //pass variables
                 destination.titlePassed = titleVar
                 destination.datePassed = dateVar
@@ -97,6 +99,9 @@ class WhatsOnListController: UIViewController {
                 destination.locationLongPassed = locationLongVar
                 destination.locationLatPassed = locationLatVar
                 destination.bookingLinkPassed = bookingLinkVar
+                
+                destination.urlStringPassed = urlStringVar
+                
                 
             }
         }

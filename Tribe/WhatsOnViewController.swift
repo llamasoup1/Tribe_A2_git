@@ -11,6 +11,8 @@ class WhatsOnViewController: UIViewController {
     @IBOutlet weak var timeTestVar: UILabel!
     @IBOutlet weak var addressTestVar: UILabel!
     @IBOutlet weak var mapView: MKMapView!
+    @IBOutlet weak var mainImageView: UIImageView!
+
     
     var titlePassed:String?
     var datePassed: String?
@@ -19,6 +21,9 @@ class WhatsOnViewController: UIViewController {
     var locationLongPassed: Double?
     var locationLatPassed: Double?
     var bookingLinkPassed: String?
+    
+    var urlStringPassed: String?
+    
     
     //set radius (zoom)
     let regionRadius: CLLocationDistance = 1000
@@ -42,6 +47,16 @@ class WhatsOnViewController: UIViewController {
         addressTestVar.text = addressPassed
         //timeTestVar.text = timePassed
         dateTestVar.text = datePassed
+        
+        let url = NSURL(string: urlStringPassed!)!
+        
+        let data = NSData(contentsOfURL: url)!
+        
+        let image = UIImage(data: data)
+        
+        mainImageView.image = image
+        
+        
     }
     
     //on load, center mapView on given coordinates
