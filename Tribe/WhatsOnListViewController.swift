@@ -26,11 +26,9 @@ class WhatsOnListController: UIViewController {
         {
         case 0:
             apiLink = "http://planvine.com/api/v1.7/event/?apiKey=b23e175bae444126bde7026d60498c8b&startDate=\(todayFormat)&endDate=\(todayFormat)"
-            print(apiLink)
             apiRequest()
         case 1:
             apiLink = "http://planvine.com/api/v1.7/event/?apiKey=b23e175bae444126bde7026d60498c8b&startDate=\(tomorrowFormat)&endDate=\(tomorrowFormat)"
-            print(apiLink)
             apiRequest()
         case 2:
             apiLink = "http://planvine.com/api/v1.7/event/?apiKey=b23e175bae444126bde7026d60498c8b&startDate=2017-05-22&endDate=2017-05-22"
@@ -38,7 +36,6 @@ class WhatsOnListController: UIViewController {
             
         default:
             apiLink = "http://planvine.com/api/v1.7/event/?apiKey=b23e175bae444126bde7026d60498c8b&startDate=2016-05-21&endDate=2016-05-21"
-
         }
         
     }
