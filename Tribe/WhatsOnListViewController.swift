@@ -13,18 +13,27 @@ class WhatsOnListController: UIViewController {
     var arrRes = [[String:AnyObject]]() //Array of dictionary
     
     var apiLink = "http://planvine.com/api/v1.7/event/?apiKey=b23e175bae444126bde7026d60498c8b&startDate=2016-05-22&endDate=2016-05-22"
+
+   
     
     //change date for each segment control press
     @IBOutlet weak var segControl: UISegmentedControl!
     @IBAction func segAction(sender: UISegmentedControl) {
+        let todayDate = NSDate()
+        let tomorrowDate = todayDate.dateByAddingTimeInterval(60*60*24)
+        let todayFormat = dateFormatter(todayDate)
+        let tomorrowFormat = dateFormatter(tomorrowDate)
+        
         switch segControl.selectedSegmentIndex
         {
         case 0:
-            apiLink = "http://planvine.com/api/v1.7/event/?apiKey=b23e175bae444126bde7026d60498c8b&startDate=2016-05-22&endDate=2016-05-22"
+            apiLink = "http://planvine.com/api/v1.7/event/?apiKey=b23e175bae444126bde7026d60498c8b&startDate=\(todayFormat)&endDate=\(todayFormat)"
+            print(apiLink)
             print(0)
             apiRequest()
         case 1:
-            apiLink = "http://planvine.com/api/v1.7/event/?apiKey=b23e175bae444126bde7026d60498c8b&startDate=2016-08-22&endDate=2016-08-22"
+            apiLink = "http://planvine.com/api/v1.7/event/?apiKey=b23e175bae444126bde7026d60498c8b&startDate=\(tomorrowFormat)&endDate=\(tomorrowFormat)"
+            print(apiLink)
             print(1)
             apiRequest()
         case 2:
@@ -112,6 +121,7 @@ class WhatsOnListController: UIViewController {
         
     }
     
+    //perfrom API request to gather data
     func apiRequest()
     {
         Alamofire.request(.GET, apiLink).responseJSON { (responseData) -> Void in
@@ -127,6 +137,13 @@ class WhatsOnListController: UIViewController {
             }
         }
 
+    }
+    
+    func dateFormatter(date: NSDate)-> String{
+        let formatter = NSDateFormatter()
+        formatter.dateFormat = "yyyy-MM-dd"
+        let convertedDate = formatter.stringFromDate(date)
+        return convertedDate
     }
     
     override func didReceiveMemoryWarning() {
