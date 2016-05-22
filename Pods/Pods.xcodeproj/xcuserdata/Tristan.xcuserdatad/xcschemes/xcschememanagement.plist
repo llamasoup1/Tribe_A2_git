@@ -14,6 +14,11 @@
 			<key>orderHint</key>
 			<integer>2</integer>
 		</dict>
+		<key>Pods-sharedLinks.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>4</integer>
+		</dict>
 		<key>SwiftyJSON.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -23,6 +28,16 @@
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
 		<key>432ECC54282C84882B482CCB4CF227FC</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>8169E4F01F28101FCE849513341C58EA</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>81EA6A5881006F4177A0CA86D5850C06</key>
 		<dict>
 			<key>primary</key>
 			<true/>
