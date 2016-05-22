@@ -8,6 +8,7 @@
 
 import UIKit
 import CoreData
+import FBSDKLoginKit
 
 class LogInViewController: UIViewController {
     
@@ -22,6 +23,16 @@ class LogInViewController: UIViewController {
             self.performSegueWithIdentifier("logIn" ,sender:sender)
         }
     }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        let loginButton = FBSDKLoginButton()
+        loginButton.center = view.center
+        view.addSubview(loginButton)
+        
+    }
+
     
         
 }
