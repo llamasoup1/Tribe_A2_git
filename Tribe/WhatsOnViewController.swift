@@ -1,6 +1,7 @@
-//Tribe - Assignment 2 (What's on UIViewController)
 //
-
+//  WhatsOnViewController
+//  Tribe
+//
 import UIKit
 import MapKit
 

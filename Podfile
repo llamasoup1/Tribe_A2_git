@@ -6,3 +6,7 @@ pod 'Alamofire', '~> 3.1.2'
 pod 'SwiftyJSON'
 end
 
+target 'sharedLinks' do
+pod 'Alamofire', '~> 3.1.2'
+pod 'SwiftyJSON'
+end

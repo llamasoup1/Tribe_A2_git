@@ -9,9 +9,24 @@
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
+		<key>sharedLinks.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>64F691C91CF19A8500C82C98</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>64F691DC1CF19BC000C82C98</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>6A64C40E1CED87BB00CCA7C6</key>
 		<dict>
 			<key>primary</key>

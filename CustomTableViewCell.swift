@@ -1,13 +1,10 @@
 //
-//  CustomTableViewCell.swift
+//  CutomeTableCellView
 //  Tribe
-//
-//  Created by RMIT on 20/05/2016.
-//  Copyright © 2016 Tristan Tambourine. All rights reserved.
 //
 
 import UIKit
-
+//custom cell view
 class CustomTableViewCell: UITableViewCell {
     @IBOutlet weak var labelTitle: UILabel!
     @IBOutlet weak var labelSubtitle: UILabel!
@@ -16,7 +13,7 @@ class CustomTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        //custom look for images - circular
         imageViewCell.layer.cornerRadius = 45;
         imageViewCell.layer.masksToBounds = true;
     }
@@ -24,7 +21,7 @@ class CustomTableViewCell: UITableViewCell {
     override func setSelected(selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
-        // Configure the view for the selected state
+     
     }
 
 }
