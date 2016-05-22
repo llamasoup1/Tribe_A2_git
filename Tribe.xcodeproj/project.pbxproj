@@ -15,6 +15,7 @@
 		64325B5A1CF0369C00FCC5BC /* customCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64325B591CF0369C00FCC5BC /* customCell.swift */; };
 		64F691BF1CF078BE00C82C98 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64F691BE1CF078BE00C82C98 /* User.swift */; };
 		64F691C11CF078F000C82C98 /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64F691C01CF078F000C82C98 /* DataModel.swift */; };
+		64F691C31CF156BA00C82C98 /* AlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64F691C21CF156BA00C82C98 /* AlertController.swift */; };
 		64FAF9D51CF0399E009E6AF7 /* WhatsOnViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64FAF9D41CF0399E009E6AF7 /* WhatsOnViewController.swift */; };
 		6A64C4131CED87BB00CCA7C6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A64C4121CED87BB00CCA7C6 /* AppDelegate.swift */; };
 		6A64C4151CED87BB00CCA7C6 /* WhatsOnListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A64C4141CED87BB00CCA7C6 /* WhatsOnListViewController.swift */; };
@@ -35,6 +36,7 @@
 		64325B591CF0369C00FCC5BC /* customCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = customCell.swift; path = Tribe/customCell.swift; sourceTree = "<group>"; };
 		64F691BE1CF078BE00C82C98 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		64F691C01CF078F000C82C98 /* DataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
+		64F691C21CF156BA00C82C98 /* AlertController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertController.swift; sourceTree = "<group>"; };
 		64FAF9D41CF0399E009E6AF7 /* WhatsOnViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WhatsOnViewController.swift; path = Tribe/WhatsOnViewController.swift; sourceTree = "<group>"; };
 		6A64C40F1CED87BB00CCA7C6 /* Tribe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tribe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6A64C4121CED87BB00CCA7C6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = Tribe/AppDelegate.swift; sourceTree = "<group>"; };
@@ -70,6 +72,7 @@
 				390F9B5C1CED8E7000F34071 /* RegisterViewController.swift */,
 				6A64C4141CED87BB00CCA7C6 /* WhatsOnListViewController.swift */,
 				64325B591CF0369C00FCC5BC /* customCell.swift */,
+				64F691C21CF156BA00C82C98 /* AlertController.swift */,
 			);
 			name = Controller;
 			path = ..;
@@ -78,8 +81,8 @@
 		390F9B561CED897600F34071 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				64F691BE1CF078BE00C82C98 /* User.swift */,
 				64F691C01CF078F000C82C98 /* DataModel.swift */,
+				64F691BE1CF078BE00C82C98 /* User.swift */,
 			);
 			name = Model;
 			path = ..;
@@ -272,6 +275,7 @@
 				64325B5A1CF0369C00FCC5BC /* customCell.swift in Sources */,
 				390F9B941CEEA27D00F34071 /* CustomTableViewCell.swift in Sources */,
 				390F9B5D1CED8E7000F34071 /* RegisterViewController.swift in Sources */,
+				64F691C31CF156BA00C82C98 /* AlertController.swift in Sources */,
 				64F691BF1CF078BE00C82C98 /* User.swift in Sources */,
 				64F691C11CF078F000C82C98 /* DataModel.swift in Sources */,
 				6A64C41B1CED87BB00CCA7C6 /* Tribe.xcdatamodeld in Sources */,

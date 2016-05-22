@@ -42,7 +42,8 @@
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="dav-Uf-WdV" kind="show" id="h7g-2x-5oe"/>
+                                    <action selector="logIn:" destination="0F6-4Z-eip" eventType="touchUpInside" id="lSr-ER-sab"/>
+                                    <segue destination="dav-Uf-WdV" kind="presentation" identifier="logIn" id="cWB-Zo-PWD"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -62,6 +63,10 @@
                             <constraint firstAttribute="leadingMargin" secondItem="dWw-Bm-ui3" secondAttribute="leading" id="qQi-g9-1Nr"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="emailField" destination="dWw-Bm-ui3" id="ngy-vM-hYX"/>
+                        <outlet property="passwordField" destination="eDl-qE-Vxu" id="O2E-M9-psC"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NnL-or-YwB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -151,7 +156,7 @@
                                 </state>
                                 <connections>
                                     <action selector="register:" destination="6Pf-l4-0dB" eventType="touchUpInside" id="bEr-2j-Ia6"/>
-                                    <segue destination="dav-Uf-WdV" kind="show" id="bFa-5J-mkE"/>
+                                    <segue destination="dav-Uf-WdV" kind="presentation" identifier="registration" id="uxy-Rc-mWL"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Qog-ZE-bhe">
@@ -480,6 +485,6 @@
         <image name="Tribe Logo" width="780" height="439"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="h7g-2x-5oe"/>
+        <segue reference="cWB-Zo-PWD"/>
     </inferredMetricsTieBreakers>
 </document>
